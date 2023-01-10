@@ -75,16 +75,7 @@ SH_DECL_HOOK0(IServerGameDLL, GetTickInterval, const, 0, float);
 
 float GetTickInterval()
 {
-	float tickinterval = (1.0f / 30.0f);
-
-	if ( CommandLine()->CheckParm( "-tickrate" ) )
-	{
-		float tickrate = CommandLine()->ParmValue( "-tickrate", 0 );
-		Msg("Tickrate_Enabler: Read TickRate %f\n", tickrate);
-		if ( tickrate > 10 )
-			tickinterval = 1.0f / tickrate;
-	}
-
+	float tickinterval = (1.0f / 100.0f);
 	RETURN_META_VALUE(MRES_SUPERCEDE, tickinterval );
 }
 

@@ -75,7 +75,7 @@ SH_DECL_HOOK0(IServerGameDLL, GetTickInterval, const, 0, float);
 
 float GetTickInterval()
 {
-	float tickinterval = (1.0f / 100.0f);
+	float tickinterval = (1.0f / 300.0f);
 	RETURN_META_VALUE(MRES_SUPERCEDE, tickinterval );
 }
 
